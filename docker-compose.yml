@@ -16,14 +16,14 @@ services:
         max_attempts: 10
   mysqldb:
     image: mysql:8.0
-    container_name: mysqldb-container
+    container_name: mysqldb
     ports:
       - "3306:3306"
     networks:
       - docker-mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=test
+      - MYSQL_DATABASE=sbms
 networks:
   docker-mysql:
   
